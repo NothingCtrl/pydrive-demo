@@ -1,2 +1,2 @@
 ## PyDrive Auto Upload
-This application using library [PyDrive](https://pythonhosted.org/PyDrive/) to upload file to GDrive
+This application demo using library [PyDrive](https://pythonhosted.org/PyDrive/) to upload file to GDrive

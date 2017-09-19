@@ -1,0 +1,15 @@
+{
+  "email_address": "example@gmail.com",
+  "email_password": "123",
+  "email_smtp_address": "smtp.gmail.com",
+  "email_smtp_port": "587",
+  "email_smtp_tls": true,
+  "email_to_address": "youremail@gmail.com",
+  "gdrive_parent_folder": "",
+  "delete_source_file_after_upload": true,
+  "upload_source_folders": [
+    "/path1/to/storefile/to/upload",
+    "/path2/to/storefile/to/upload"
+  ],
+  "filter_pattern": ""
+}

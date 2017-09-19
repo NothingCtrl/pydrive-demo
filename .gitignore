@@ -4,3 +4,4 @@ credentials.json
 client_secrets.json
 settings.yaml
 .idea
+logs/*

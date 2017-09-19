@@ -36,8 +36,7 @@ def upload_one_to_gdrive(file_path):
     :return:
     """
     filename = os.path.basename(file_path)
-    # id: is folder_id of google drive can get in URL https://drive.google.com/drive/u/2/folders/0Bw_M4RyCyVQTYzFHRjZycWh3Nmc
-    file1 = drive.CreateFile({'title': filename, "parents": [{"kind": "drive#fileLink", "id": "0Bw_M4RyCyVQTYzFHRjZycWh3Nmc"}]})
+    file1 = drive.CreateFile({'title': filename})
     # todo: check file size cause pydrive throw error when upload file zero byte
     file1.SetContentFile(file_path)  # Set content of the file from given string.
     file1.Upload()

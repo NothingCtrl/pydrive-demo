@@ -36,10 +36,12 @@ def read_app_settings():
         "filter_pattern": None,
     }
 
-    if os.path.isfile('app_settings.json'):
-        with open('app_settings.json', 'r') as json_file:
-            settings = json.load(json_file)
+    dir_path = os.path.dirname(os.path.realpath(__file__))
+    json_path = dir_path + '/app_settings.json'
 
+    if os.path.isfile(json_path):
+        with open(json_path, 'r') as json_file:
+            settings = json.load(json_file)
     return settings
 
 
@@ -47,6 +49,7 @@ app_settings = read_app_settings()
 
 # list folders have files to upload
 folders = app_settings['upload_source_folders']
+
 
 # ======================================================
 
@@ -143,7 +146,6 @@ def send_email(subject, body, to_address=None):
 
 
 def app_run():
-
     write_log("--------- App start --------- ")
 
     """
@@ -158,13 +160,14 @@ def app_run():
 
     # pattern: use for filter files with pattern in file name,
     # example pattern = '.zip' to filter file have .zip in the name, set = None if not use.
-    pattern = len(app_settings['filter_pattern']) > 0 and app_settings['filter_pattern'] or None
+    pattern = app_settings['filter_pattern'] and app_settings['filter_pattern'] or None
 
-    for f in folders:
-        files = os.listdir(u"{}".format(f))
-        for file_name in files:
-            if not pattern or pattern in file_name:
-                files_list.append("{}/{}".format(f, file_name))
+    if folders:
+        for f in folders:
+            files = os.listdir(u"{}".format(f))
+            for file_name in files:
+                if not pattern or pattern in file_name:
+                    files_list.append("{}/{}".format(f, file_name))
 
     """
     Upload with three thread (three files at the same time)

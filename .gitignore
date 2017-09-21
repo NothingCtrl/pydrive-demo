@@ -2,6 +2,5 @@ upload/*
 !upload/zip_and_delete_folder
 credentials.json
 client_secrets.json
-settings.yaml
 .idea
 logs/*

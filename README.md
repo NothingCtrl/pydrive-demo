@@ -11,3 +11,4 @@ Upload file to GDrive with file compress support (only compress when have set va
 * Config parameter `delete_source_file_after_upload` in `app_settings.json` mean, after file uploaded, it will be delete file in local.
 * Files for upload must not contain any space in the filename.
 * To upload files, run `python app.py`, a log file will create in `logs/app_run_date.log` for logging.
+

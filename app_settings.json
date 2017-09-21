@@ -11,5 +11,7 @@
     "/path1/to/storefile/to/upload",
     "/path2/to/storefile/to/upload"
   ],
-  "filter_pattern": ""
+  "filter_pattern": "",
+  "filter_min_file_age": "",
+  "compress_password": ""
 }

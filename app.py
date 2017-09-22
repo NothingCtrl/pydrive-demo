@@ -235,7 +235,7 @@ def app_run():
                     if not filter_min_file_age or run_time - os.path.getmtime(full_filepath) >= filter_min_file_age:
                         files_list.append(full_filepath)
 
-    list_files_to_delete = files_list
+    list_files_to_delete = files_list[:]
     write_log("--- Total file to upload: %d" % len(files_list))
 
     compress_password = app_settings['compress_password'] and app_settings['compress_password'] or None

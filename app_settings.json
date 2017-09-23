@@ -6,12 +6,16 @@
   "email_smtp_tls": true,
   "email_to_address": "youremail@gmail.com",
   "gdrive_parent_folder": "",
-  "delete_source_file_after_upload": true,
+  "delete_source_file": false,
   "upload_source_folders": [
     "/path1/to/storefile/to/upload",
     "/path2/to/storefile/to/upload"
   ],
-  "filter_pattern": "",
+  "filter_pattern": [
+  ],
   "filter_min_file_age": "",
-  "compress_password": ""
+  "compress_password": "pydrive",
+  "delete_compress_file": true,
+  "max_time_retry_upload_fail": 100,
+  "print_log": true
 }
